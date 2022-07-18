@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
+    <script src = "{{url_for('static',filename='jquery.js')}}"></script>
+    <style>
+        body {
+            background-color:#2c3e50;
+            background: -webkit-linear-gradient(to right, #fd746c, #2c3e50);
+            background: linear-gradient(to right, #fd746c, #2c3e50);
+        }
+
+        a:hover {
+            color: white;
+            background-color: darkslategrey;
+        }
+
+        .active {
+            color: white;
+            background-color: darkslategrey;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            display: inline;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        li {
+            float: left;
+        }
+        .vl {
+            border-left: 700px solid green;
+            height: 5px;
+            position: absolute;
+            left: 25%;
+            margin-left: -3px;
+            top: 100;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse fixed-top py-2" style="background-color:green;">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/home" class="navbar-brand" style="color:gainsboro;">Disease Prediction</a>
+                <a href = "{{ url_for('home') }}" class="navbar-item"style="margin-left:13px">Home</a>
+                <a href = "{{url_for('predict')}}" class="navbar-item" style="margin-left:13px">Predict</a>
+                <a href = "/get_doctor" class="navbar-item"style="margin-left:13px">Get Doctor</a>
+                <a href="/medical_history" class="navbar-item" style="margin-left:13px">Prediction History</a>
+            </div>
+            <ul style="margin-left:60%;display:inline;" class="nav navbar-nav navbar-right">
+                <li><a href=""style="color:gainsboro;">{{session.get('email')}}</a></li>
+                <li><a href="{{url_for('logout')}}"style="color:white">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <br /><br /><br /><br />
+
+    <div class="container body-content">
+            <hr />
+            <h2>{{ title }}</h2>
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="/retrieve_doctor" class="form" method="post">
+                                    <label>Country</label>
+                                    <select class='required form-control' name="country" id="country">
+                                        <option value="Kenya">Kenya</option>
+                                        <option value="Uganda">Uganda</option>
+                                        <option value="Tanzania">Tanzania</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="Nigeria">Nigeria</option>
+                                        <option value="Rwanda">Rwanda</option>
+                                        <option value="Ethiopia">Ethiopia</option>
+                                        <option value="United States">United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="China">China</option>
+                                    </select><br>
+                                     <label>Region</label>
+                                     <select class='required form-control' name="region" id="region">
+                                         <option value="Central">Central</option>
+                                         <option value="Nyanza">Nyanza</option>
+                                         <option value="Western">Western</option>
+                                         <option value="Rift Valley">Rift Valley</option>
+                                         <option value="North Eastern">North Eastern</option>
+                                         <option value="Coastal">Coastal</option>
+                                     </select><br>
+                                     <label>Location</label>
+                                     <select class='required form-control' name="location" id="location">
+                                         <option value="0">____________</option>
+                                     </select><br>
+                                     <input type="submit" value="Get A Doctor" class = "btn btn-primary btn-block btn-lg form-control">
+                                </form>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class = "col-md-7">
+                        <div class="card bg-dark" style="height:330px">
+                            <div class="card-body">
+                                <table class="table table-stripped table-bordered table-responsive" style="color:#2c3e50;color: azure;">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Location</th>
+                                            <th>email</th>
+                                            <th>Contact</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in result %}
+                                        <tr>
+                                            <td>{{dict(i)['id']}}</td>
+                                            <td>{{dict(i)['name']}}</td>
+                                            <td>{{dict(i)['location']}}</td>
+                                            <td>{{dict(i)['email']}}</td>
+                                            <td><button class="btn btn-primary"><a href="{{url_for('send_mail')}}" style="text-decoration: none;">Send Mail</a></button></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        <hr />
+        <footer style="position: fixed;left: 0; bottom: 0;width: 100%;background-color: darkgreen;color: white;text-align: left;padding-top: 15px;">
+            <p>&copy; {{ year }} - Disease Prediction Application</p>
+        </footer>
+    </div>
+</body>
+</html>

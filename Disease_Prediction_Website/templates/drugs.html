@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>\
+    <style>
+        body {
+            background: url("static/content/backgrnd[2].gif");
+        }
+
+        a:hover {
+            color: white;
+            background-color: darkslategrey;
+        }
+
+        .active {
+            color: white;
+            background-color: darkslategrey;
+        }
+        .vl {
+            border-left: 700px solid green;
+            height: 5px;
+            position: absolute;
+            left: 25%;
+            margin-left: -3px;
+            top: 100;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:green;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/home" class="navbar-brand" style="color:gainsboro">Disease Prediction</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}" style="color:white">Home</a></li>
+                    <li><a href="{{url_for('predict')}}" style="color:white">Predict</a></li>
+                    <li><a href="{{ url_for('doctor') }}" style="color:white">Get Doctor</a></li>
+                    <li><a href="{{ url_for('history') }}" style="color:white">Medical History</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href=""style="color:gainsboro;">{{session.get('email')}}</a></li>
+                    <li><a href="/logout" style="color:white">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div>
+            <hr style="color:darkslategray"/>
+            <h2 style="text-align:center;color:blue;font-family:'Bookman Old Style'">Pharmacare</h2>
+            <div class="vl"></div><br /><br />
+         <p style="font-size: 18px;margin-left: 7%;">
+            The <b>Center of Disease Control</b> (CDC) and <b>World Health Organization</b> (WHO) recommends any of the the following drugs for treatment of <b>{{disease}}</b>. 
+         </p>
+         <p style="font-size:18px;margin-left: 10%;">
+             (1) {{drug1}}<br>
+             (2) {{drug2}}<br>
+             (3) {{drug3}}<br>
+             (4) {{drug4}}<br>
+             (5) {{drug6}}<br>
+             (6) {{drug7}}<br>
+             (7) {{drug8}}<br>
+         </p><br>
+         <p style="font-size: 18px;margin-left: 7%;">
+            Get your dose from a nearby Pharmacy.
+         </p>
+        </div>
+        <hr />
+        <footer style="position: fixed;left: 0; bottom: 0;width: 100%;background-color: darkgreen;color: white;text-align: left;padding-top: 15px;">
+            <p style="margin-left: 15px;">&copy; {{ year }} - Disease Prediction Application</p>
+        </footer>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

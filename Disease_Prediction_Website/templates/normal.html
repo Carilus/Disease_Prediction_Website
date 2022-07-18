@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+        <script src = "{{url_for('static',filename='bootstrap.min.js')}}"></script>
+        <script src = "{{url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
+        <title>Disease Prediction</title>
+        <link rel="stylesheet" href="static/mystyle.css"/>
+        <style>
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position:fixed;
+                top:0;
+                width:100%;
+
+            }
+            .active
+            {
+                color:white;
+                background-color:#333;
+            }
+            li{
+                float:left;
+
+            }
+            li a
+            {
+                display: block;
+                color:white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                margin-right: 10px;
+            }
+            a:visited
+            {
+                color:white;
+            }
+            a:hover
+            {
+                color:white;
+                background-color:#333;
+            }
+          
+           
+        </style>
+    </head>
+
+    <body>
+        <div class="container" style="margin-left: 0%;margin:0;max-width: unset;">
+            <div class="row">
+                <ul style="background-color:teal;">
+                    <li>
+                        <a href="http://localhost:5000/">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:5000/predict">Predict</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:5000/about">About</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:5000/contact">Contact</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div><br><br><br>
+        <h1>Result Centre</h1>
+         <p style="font-size: 20px;">
+            Hello there, you seem to be healthy. Kindly  identify the symptoms you are experiencing.<br>
+            Regards.
+         </p>
+    </body>
+ </html>       

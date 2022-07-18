@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>\
+    <style>
+        body {
+            background: url("static/content/backgrnd[2].gif");
+        }
+
+        a:hover {
+            color: white;
+            background-color: darkslategrey;
+        }
+
+        .active {
+            color: white;
+            background-color: darkslategrey;
+        }
+        .vl {
+            border-left: 700px solid green;
+            height: 5px;
+            position: absolute;
+            left: 25%;
+            margin-left: -3px;
+            top: 100;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:green;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand" style="color:gainsboro">Disease Prediction</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}" style="color:white">Home</a></li>
+                    <li><a href="{{url_for('predict')}}" style="color:white">Predict</a></li>
+                    <li><a href="{{ url_for('about') }}" style="color:white">About</a></li>
+                    <li><a href="{{ url_for('contact') }}" style="color:white">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="" style="color:gainsboro;">{{session.get('email')}}</a></li>
+                    <li><a href="{{ url_for('logout') }}" style="color:white">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div>
+            <hr style="color:darkslategray" />
+            <h1 style="text-align:center;color:blue;font-family:'Bookman Old Style'">Support Vector Machine</h1>
+            <div class="vl"></div><br /><br />
+            <p style="font-family:'Cambria Math';font-size:18px">
+                The Support Vector Machine (SVM) technique is a sparse kernel decision machine that avoids computing posterior probabilities when building its learning model.
+                aims at creating the best line or the decision boundary that can segregate n- dimensional space into classes so that we can easily put the new data point in the correct category in the future. SVM chooses the extreme points/vectors that help in creating the hyperlane. 
+                SVM offers a principled approach to machine learning problems because of its mathematical foundation in statistical learning theory.
+                SVM constructs its solution in terms of a subset of the training input. SVM has been extensively used for classification, regression, novelty detection tasks, and feature reduction.<br />
+                What makes SVM an attractive machine learning framework can be summarized by the following properties:<br />
+                1.	SVM is a sparse technique. Like nonparametric methods, SVM requires that all the training data be available, that is, stored in memory during the training phase, when the parameters of the SVM model are learned.<br />
+                2.	SVM is a kernel technique. SVM uses the kernel trick to map the data into a higher-dimensional space before solving the machine learning task as a convex optimization problem in which optima are found analytically rather than heuristically, as with other machine learning techniques.<br />
+                3.	SVM is a maximum margin separator. Beyond minimizing the error or a cost function, based on the training datasets (similar to other discriminant machine learning techniques), SVM imposes an additional constraint on the optimization problem: the hyperplane needs to be situated such that it is at a maximum distance from the different classes.<br />
+            </p>
+        </div>
+        <hr />
+        <footer style="position: fixed;left: 0; bottom: 0;width: 100%;background-color: darkgreen;color: white;text-align: left;padding-top: 15px;">
+            <p>&copy; {{ year }} - Disease Prediction Application</p>
+        </footer>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

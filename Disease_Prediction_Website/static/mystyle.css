@@ -1,0 +1,99 @@
+.button
+{
+    margin-top: 30px;
+    display:inline-block;
+    padding: 15px 25px;
+    font-size:15px;
+    cursor:pointer;
+    text-align:center;
+    text-decoration: none;
+    outline: none;
+    color:#fff;
+    background-color:#4CAF50;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    margin-right: 0px;
+    margin-left: 300px;
+    font-weight: bold;
+
+}
+.button1
+{
+    margin-top: 30px;
+    display:inline-block;
+    padding: 15px 25px;
+    font-size:15px;
+    cursor:pointer;
+    text-align:center;
+    text-decoration: none;
+    outline: none;
+    color:#fff;
+    background-color:red;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    margin-right: 0px;
+    font-weight: bold;
+}
+body
+{
+    background-color: silver;
+    color:darkslategrey;
+    background:url("backgrnd[2].gif");
+
+}
+form{
+    margin-left: 200px;
+}
+p{
+    margin-left:200px;
+    color: black;
+}
+h1{
+    text-align: center;
+    color:blue;
+}
+h2{
+    text-align: center;
+    color:blue;
+    font-weight:lighter italic;
+    font-size: 20px;
+}
+select{
+    margin-top:20px;
+    margin-right: 70px;
+    height:35px;
+    margin-left: 15px;
+    text-align:center;
+    border-color: transparent;
+    border-radius: 40px;
+    position:relative;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    background-color:lightslategrey;
+    font-size: 16px;
+    font-style: bold;
+
+}
+.sym{
+    margin-top:20px;
+    margin-right: 70px;
+    height:35px;
+    margin-left: 15px;
+    text-align:center;
+    border-color: transparent;
+    border-radius: 40px;
+    position:relative;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    background-color:lightslategrey;
+    font-size: 16px;
+    margin-left: 8px;
+    font-style: bold;
+}
+
+option
+{
+    font-size: 14px;
+}

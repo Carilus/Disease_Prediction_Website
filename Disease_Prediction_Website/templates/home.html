@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
+    <script src = "{{url_for('static',filename='jquery.js')}}"></script>
+    <title>Disease Predictions</title>
+    <link rel="stylesheet" href="static/mystyle.css" />
+
+    <style>
+        li {
+            float: left;
+        }
+
+        body {
+            background: url('static/back.jpg');
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: darkgreen;
+            color: white;
+            text-align: left;
+            padding-top: 15px;
+        }
+
+        table {
+            border-radius: 20px;
+            border-color: transparent;
+        }
+
+        .active {
+            color: white;
+            background-color: teal;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            background-color: darkslategrey;
+        }
+
+        .active {
+            color: white;
+            background-color: darkslategrey;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse fixed-top py-2" style="background-color:green;">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand" style="color:gainsboro;">Disease Prediction</a>
+            </div>
+            <div class="navbar-collapse">
+                <div class="nav navbar-nav">
+                    <ul style="padding-left: 15%;">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('services')}}">Services</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('about_system')}}">About</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('contact_us') }}">Contact Us</a>
+                        </li>
+                        <li style="padding-left:500px">
+                            <a href="/login">Login/Register</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <h1 style="color:black;font-size:40px"><b><blink><marquee>DISEASE PREDICTION USING MACHINE LEARNING</marquee></blink></b></h1><br><br><br><br>
+    <h2 style="margin-left:150px;color:beige;font-size:40px"><b>GET MEDICATIONS ANYWHERE ANYTIME</b></h2>
+      
+    <hr />
+    <footer style="position: fixed;left: 0; bottom: 0;width: 100%;background-color: darkgreen;color: white;text-align: left;padding-top: 15px;;">
+        <p style="color:white;margin-left:15px">&copy; {{ year }} - Disease Prediction Application</p>
+    </footer>
+
+
+</body>
+</html>

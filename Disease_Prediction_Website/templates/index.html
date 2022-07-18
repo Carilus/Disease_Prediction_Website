@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron" style=" background: url('static/content/back.jpg');">
+    <h2 style="color:black"><b><blink><marquee>DISEASE PREDICTION USING MACHINE LEARNING</marquee></blink></b></h2><br>
+    <h2 style="margin-left:200px;color:beige"><b>GET MEDICATIONS ANYWHERE ANYTIME</b></h2>
+    <p><a href="{{ url_for('about')}}" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Disease Prediction System gives you the ability to predict or detect the disease you are suffering from from the comform of your location. You only need to populate the symptoms you are experiencing.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('about') }}"">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Prediction</h2>
+        <p>Predict your health condition at the comfort of your home/location.</p>
+        <p><a class="btn btn-default" href="{{ url_for('predict') }}">Predict &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Support Vector Machines</h2>
+        <p>SVM aims at creating the best line or the decision boundary that can segregate n- dimensional space into classes....</p>
+        <p><a class="btn btn-default" href="{{ url_for('model') }}">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

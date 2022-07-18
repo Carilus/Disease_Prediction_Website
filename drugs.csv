@@ -1,0 +1,43 @@
+Disease,Drug_1,Drug_2,Drug_3,Drug_4,Drug_6,Drug_7,Drug_8
+Drug Reaction,,,,,,,
+Malaria,Artemether/Lumefantrine(Coartem),Chloroquine,Doxycycline,Quinine Pills,Quinine Injection,Quinindine,Tafenoquine
+Allergy,Chlorpheniramine/Phenylephrine,Ibuprofen,Acetaminophen/pheniramine,Monetasone,Peanut oil allergen powder,Budesonide Intranasal,Diphenhydramine
+Hypothyroidism,Liotrix,Levothyroxine,Thyroid Desiccated,Liothyronine,,,
+Psoriasis,Spesolimab,Roflumilat Topical,Calcipotriene,Deucravacitinib,Clobetasol,Bimekizumab,Tapinarof Topical
+GERD,Esomeprazole,Pantoprazole,Bethanechol,Nizatidine,Lansoprazole,Omeprazole,Omeprazole
+Chronic cholestasis,,,,,,,
+hepatitis A,Immune Globulin IM (IGIM),Hepatitis A/B Vaccine,Hepatitis A Vaccine Inactivated,,,,
+Osteoarthristis,,,,,,,
+(vertigo) Paroymsal  Positional Vertigo,,,,,,,
+Hypoglycemia,,,,,,,
+Acne,Resorcinol/Sulfur,Clindamycin,Erythromycin,Adapalene,Trifarotene,Benzoyl Peroxide,Salicylic acid acne
+Diabetes ,Insulin Deglude,Rtirzepatide,Sotagliflozin,Pramlintide,TolazamideChlorpheniramine,Acetaminiphen,Bitter melon
+Impetigo,Penicillin,Ceftin,Bactroban,Mupirocin,Altrabax,Retapamulin,Duricef
+Hypertension ,Minoxidil,Levamlodipine,Guanabenz,Clevidipine,Esmolol,Triamterene,Penbutolol
+Peptic ulcer diseae,,,,,,,
+Dimorphic hemmorhoids(piles),,,,,,,
+Common Cold,Aspirin,Acetaminophen,Chlorpheniramine,Acetaminophen,Dextromethrophan,Decongestant,Nonsteroidal Anti-inflammatory drug
+Chicken pox,Valacyclovir,"Vaicella zoster immune globulin, human",Acyclovir,Loratadine,Tecovirimat,diphenhydramine,
+Cervical spondylosis,,,,,,,
+Hyperthyroidism,Methimazole,Propylthiouracil,Sodium Iodide I-131,,,,
+Urinary tract infection,Suloenem,Acetohydroxamic Acid,Methanamine,Tebipenem,Nitrofurantoin,Fosfomycin,Imipenem/Cilastatin
+Varicose veins,Morrhuate Sodium,Polidocanol,,,,,
+AIDS,,,,,,,
+Paralysis (brain hemorrhage),Dichlorphenamide,,,,,,
+Typhoid,Cefotaxime,Cefixime,Typhoid Vaccine LiveTyphoid Polysaccharide vaccine,,,,
+Hepatitis B,Hepatitis B Vaccine,Hepatitis B Immune Globulin (HBIG),Lamivudine,Hepatitis A/B Vaccine,,,
+Fungal infection,Amphotericin B Liposomal,Amphotericin B Phospholipid Complex,Undecylenic,Granulocytes,Oxiconazole,Tolnaftate,Amphotericin B Deoxycholate
+Hepatitis C,Sofosbuvir,Elbasvir,Ribavirin,Ledipasvor,Simeprevir,,
+Migraine,Meloxicam/Rizatriptan,Naproxen/Sumatriptan,Rizatriptan,Acetaminophen/Caffeine,Eletriptan,Sumatriptan,Isometheptene/Dichaloralphenazone/Acetaminophen
+Bronchial Asthma,Epinephrine Racemic,Mannitol Inhalation,Boswellia,Timolol Ophthalmic,,,
+Alcoholic hepatitis,SAMe,,,,,,
+Jaundice,Cholestyramine,Colestipol,Ceftriaxone,Amoxillin,Macrolides,Sulfonamides,Tetracyclines
+Hepatitis E,Erythromycin Ethylsuccinate,Paromomycin,,,,,
+Dengue,Dengue Vaccine,Acetaminophen,Analgestic,Aspirin,,,
+Hepatitis D,Bulevirtide,Pseudoephedrine/Desloratadine,Cetirizine/Pseudoephedrine,Paromomycin,,,
+Heart attack,Isoproterenol,,,,,,
+Pneumonia,Atovaquone,Amoxillin,Amocian,Augmentin XR,Azithromycin,Clarithromycin,Tetracyclines
+Arthritis,Colchicine/Probenecid,Filgotinib,Prednisone,Celecoxib,Diclofenac,Etodolac,Fenoprofen
+Gastroenteritis,,,,,,,
+Tuberculosis,Pyrazinamide,Ethionamide,BCG Vaccine Live,Tuberculin purified protein derivative,Pretomanid,Isoniazid,Bedaquiline
+Covid_19,,,,,,,
